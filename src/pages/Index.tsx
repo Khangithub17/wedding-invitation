@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import EventDetails from "@/components/EventDetails";
 import CountdownTimer from "@/components/CountdownTimer";
 import Gallery from "@/components/Gallery";
+import QRGenerator from "@/components/QRGenerator";
 import SurpriseMessage from "@/components/SurpriseMessage";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,7 @@ const Index = () => {
       <EventDetails />
       <CountdownTimer />
       <Gallery />
+      <QRGenerator />
       <SurpriseMessage />
       <Footer />
     </div>

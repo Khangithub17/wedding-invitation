@@ -27,8 +27,8 @@ const EventDetails = () => {
                 <h3 className="font-playfair text-2xl font-semibold text-foreground mb-2">
                   Venue
                 </h3>
-                <p className="font-poppins text-lg text-muted-foreground">
-                  Royal Orchid Banquet, Surat
+                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                  Dawat Party Plot opposite sentosa home city, near jhunjhunwala international school, Chanod Colony, Dungra, Vapi, Gujarat 396191
                 </p>
               </div>
             </div>
@@ -43,7 +43,7 @@ const EventDetails = () => {
                   Time
                 </h3>
                 <p className="font-poppins text-lg text-muted-foreground">
-                  Reception starts at 7:00 PM
+                  Reception: 6 PM To 11 PM
                 </p>
               </div>
             </div>
@@ -51,14 +51,14 @@ const EventDetails = () => {
             {/* Map Embed */}
             <div className="w-full h-64 sm:h-80 rounded-lg overflow-hidden border-2 border-border shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.982!2d72.831!3d21.170!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEwJzEyLjAiTiA3MsKwNDknNTEuNiJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.234567!2d72.9089!3d20.3925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDIzJzMzLjAiTiA3MsKwNTQnMzIuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Wedding Venue Location"
+                title="Dawat Party Plot, Vapi - Wedding Venue Location"
               />
             </div>
 

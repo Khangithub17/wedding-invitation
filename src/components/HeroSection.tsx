@@ -44,13 +44,17 @@ const HeroSection = () => {
           </div>
         </div>
 
+        <p className="font-playfair text-xl sm:text-2xl text-muted-foreground italic mb-3 max-w-3xl mx-auto">
+          "Two souls, one heart, forever intertwined"
+        </p>
+        
         <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
-          The Wedding Hub 💍
+          Saheba & Sufiyan 💍
         </h1>
         
-        <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-rose-gold mb-6">
-          Saheba & [Partner Name]
-        </h2>
+        <p className="font-playfair text-2xl sm:text-3xl text-rose-gold italic mb-6">
+          Begin Their Forever Together
+        </p>
 
         <p className="font-poppins text-lg sm:text-xl text-muted-foreground mb-3 max-w-2xl mx-auto">
           Join us in celebrating love, laughter, and forever.
