@@ -1,22 +1,31 @@
+import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import EventDetails from "@/components/EventDetails";
-import CountdownTimer from "@/components/CountdownTimer";
+import LoveClock from "@/components/LoveClock";
 import Gallery from "@/components/Gallery";
+import Guestbook from "@/components/Guestbook";
 import QRGenerator from "@/components/QRGenerator";
 import SurpriseMessage from "@/components/SurpriseMessage";
 import Footer from "@/components/Footer";
+import LoaderScreen from "@/components/LoaderScreen";
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="min-h-screen bg-background font-poppins">
-      <HeroSection />
-      <EventDetails />
-      <CountdownTimer />
-      <Gallery />
-      <QRGenerator />
-      <SurpriseMessage />
-      <Footer />
-    </div>
+    <>
+      {isLoading && <LoaderScreen onLoadComplete={() => setIsLoading(false)} />}
+      <div className="min-h-screen bg-background font-poppins">
+        <HeroSection />
+        <EventDetails />
+        <LoveClock />
+        <Gallery />
+        <Guestbook />
+        <QRGenerator />
+        <SurpriseMessage />
+        <Footer />
+      </div>
+    </>
   );
 };
 
