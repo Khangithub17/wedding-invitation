@@ -73,8 +73,7 @@ const SurpriseMessage = () => {
                 </p>
                 
                 <p className="font-playfair text-xl sm:text-2xl text-rose-gold font-semibold pt-4">
-                  — With love,<br />
-                  Shahbaz ❤️
+                  — Shahbaz ❤️
                 </p>
               </div>
 

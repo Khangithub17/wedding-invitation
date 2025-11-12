@@ -20,14 +20,14 @@ const QRGenerator = () => {
       return;
     }
 
-    const invitationData = `Wedding Invitation for ${guestName}\nSaheba & Sufiyan\nDecember 26, 2025\nDawat Party Plot, Vapi\n6 PM - 11 PM\n${window.location.href}`;
-    const encodedData = encodeURIComponent(invitationData);
-    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedData}`;
+    // Create URL to invitation page with guest name
+    const invitationUrl = `${window.location.origin}/invitation?guest=${encodeURIComponent(guestName.trim())}`;
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(invitationUrl)}`;
     
     setQrCodeUrl(qrUrl);
     toast({
       title: "QR Code Generated! 🎉",
-      description: `Invitation QR code created for ${guestName}`,
+      description: `Scan the QR code to view ${guestName}'s personalized invitation card!`,
     });
   };
 
@@ -107,8 +107,11 @@ const QRGenerator = () => {
                 </div>
                 
                 <div className="text-center">
-                  <p className="font-poppins text-sm text-muted-foreground mb-4">
+                  <p className="font-poppins text-sm text-muted-foreground mb-2">
                     QR Code for: <span className="font-semibold text-foreground">{guestName}</span>
+                  </p>
+                  <p className="font-poppins text-xs text-rose-gold mb-4">
+                    ✨ Scan this QR code to view a beautiful personalized invitation card!
                   </p>
                   <Button
                     onClick={downloadQR}
