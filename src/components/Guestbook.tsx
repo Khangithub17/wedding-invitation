@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -25,6 +25,21 @@ const Guestbook = () => {
   const [wish, setWish] = useState("");
   const [blessings, setBlessings] = useState<BlessingParticle[]>([]);
   const [wishes, setWishes] = useState<{ name: string; wish: string }[]>([]);
+
+  // Load wishes from localStorage on mount
+  useEffect(() => {
+    const savedWishes = localStorage.getItem("wedding-wishes");
+    if (savedWishes) {
+      setWishes(JSON.parse(savedWishes));
+    }
+  }, []);
+
+  // Save wishes to localStorage whenever they change
+  useEffect(() => {
+    if (wishes.length > 0) {
+      localStorage.setItem("wedding-wishes", JSON.stringify(wishes));
+    }
+  }, [wishes]);
 
   const triggerBlessingRain = () => {
     const newBlessings: BlessingParticle[] = [];

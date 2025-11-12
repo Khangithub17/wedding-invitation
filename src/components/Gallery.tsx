@@ -4,6 +4,8 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import galleryDog from "@/assets/gallery-dog.jpg";
+import galleryCat from "@/assets/gallery-cat.jpg";
 
 const Gallery = () => {
   const images = [
@@ -12,7 +14,9 @@ const Gallery = () => {
     { src: gallery3, alt: "Wedding rings on silk fabric" },
     { src: gallery4, alt: "Elegant wedding cake" },
     { src: gallery5, alt: "Venue decoration with fairy lights" },
-    { src: gallery6, alt: "Champagne glasses celebration" }
+    { src: gallery6, alt: "Champagne glasses celebration" },
+    { src: galleryDog, alt: "Adorable puppy celebrating the wedding" },
+    { src: galleryCat, alt: "Cute kitten with flowers" }
   ];
 
   return (
