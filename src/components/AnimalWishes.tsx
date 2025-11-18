@@ -51,10 +51,10 @@ const AnimalWishes = () => {
     <section className="py-20 px-4 bg-gradient-to-b from-champagne/30 to-soft-pink/20 relative overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-5xl font-playfair text-rose-gold mb-3">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-playfair text-rose-gold mb-3">
             🐾 Furry Friends' Wishes 🐾
           </h2>
-          <p className="text-lg text-muted-foreground font-poppins">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-poppins px-4">
             Even our adorable friends want to celebrate! (Tap them for smiles!)
           </p>
           <div className="h-1 w-32 mx-auto bg-gradient-to-r from-rose-gold via-accent to-rose-gold rounded-full mt-4" />
@@ -92,13 +92,13 @@ const AnimalWishes = () => {
                   <img
                     src={animal.image}
                     alt={animal.name}
-                    className="relative w-48 h-48 rounded-full object-cover border-4 border-rose-gold/30 shadow-xl group-hover:scale-105 transition-transform duration-500"
+                    className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-rose-gold/30 shadow-xl group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="text-2xl font-playfair text-rose-gold mb-3">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-playfair text-rose-gold mb-3">
                   {animal.name}
                 </h3>
-                <p className="text-muted-foreground font-poppins leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-poppins leading-relaxed">
                   {animal.message}
                 </p>
               </div>

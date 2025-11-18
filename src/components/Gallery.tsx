@@ -23,7 +23,7 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto animate-fade-in">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-3">
+          <h2 className="font-playfair text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3">
             Memories & Magic
           </h2>
           <div className="h-1 w-32 mx-auto bg-gradient-to-r from-rose-gold via-accent to-rose-gold rounded-full" />

@@ -51,10 +51,10 @@ const RomanticQuotes = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-5xl font-playfair text-rose-gold mb-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-rose-gold mb-3">
             Words of Love 💌
           </h2>
-          <p className="text-lg text-muted-foreground font-poppins">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-poppins px-4">
             Beautiful words for a beautiful soul
           </p>
           <div className="h-1 w-32 mx-auto bg-gradient-to-r from-rose-gold via-accent to-rose-gold rounded-full mt-4" />
@@ -70,11 +70,11 @@ const RomanticQuotes = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex flex-col items-center text-center space-y-4">
-                <Heart className="w-8 h-8 text-rose-gold fill-rose-gold/20" />
-                <p className="text-lg font-poppins text-foreground leading-relaxed italic">
+                <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-rose-gold fill-rose-gold/20" />
+                <p className="text-sm sm:text-base md:text-lg font-poppins text-foreground leading-relaxed italic">
                   "{quote.text}"
                 </p>
-                <p className="text-sm font-playfair text-rose-gold">
+                <p className="text-xs sm:text-sm font-playfair text-rose-gold">
                   — {quote.author}
                 </p>
               </div>

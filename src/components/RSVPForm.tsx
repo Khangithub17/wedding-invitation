@@ -70,11 +70,11 @@ const RSVPForm = () => {
     <section className="py-20 px-4 bg-gradient-to-br from-background via-primary/5 to-background">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12 animate-fade-in">
-          <Heart className="w-12 h-12 mx-auto mb-4 text-primary animate-pulse" />
-          <h2 className="text-4xl md:text-5xl font-crimson text-foreground mb-4">
+          <Heart className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-primary animate-pulse" />
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-crimson text-foreground mb-4">
             RSVP to Our Wedding
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-4">
             Please let us know if you can join us in our celebration
           </p>
         </div>

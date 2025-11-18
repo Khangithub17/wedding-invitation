@@ -5,10 +5,10 @@ const CoupleDance = () => {
     <section className="py-20 px-4 bg-gradient-to-b from-ivory to-soft-pink/30 relative overflow-hidden">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl font-playfair text-rose-gold mb-3">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-playfair text-rose-gold mb-3">
             Dancing into Forever 💃🕺
           </h2>
-          <p className="text-lg text-muted-foreground font-poppins italic">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-poppins italic px-4">
             "In every step we take together, our hearts beat as one"
           </p>
           <div className="h-1 w-32 mx-auto bg-gradient-to-r from-rose-gold via-accent to-rose-gold rounded-full mt-4" />
@@ -26,7 +26,7 @@ const CoupleDance = () => {
         </div>
 
         <div className="mt-8 text-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <p className="text-lg font-poppins text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg font-poppins text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Every dance tells a story, and ours begins with love, laughter, and a lifetime of memories to create together. 
             Join us as we take our first steps into forever. ✨
           </p>

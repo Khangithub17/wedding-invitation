@@ -63,12 +63,12 @@ const QRGenerator = () => {
       <div className="max-w-3xl mx-auto animate-fade-in">
         <div className="text-center mb-12">
           <div className="inline-block">
-            <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-3">
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
               Wedding Invitation QR Generator
             </h2>
             <div className="h-1 w-32 mx-auto bg-gradient-to-r from-rose-gold via-accent to-rose-gold rounded-full" />
           </div>
-          <p className="font-poppins text-lg text-muted-foreground mt-4">
+          <p className="font-poppins text-sm sm:text-base md:text-lg text-muted-foreground mt-4 px-4">
             Create personalized QR codes for your wedding invitations
           </p>
         </div>
@@ -77,7 +77,7 @@ const QRGenerator = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-3 mb-6">
               <QrCode className="text-rose-gold" size={32} />
-              <h3 className="font-playfair text-2xl font-semibold text-foreground">
+              <h3 className="font-playfair text-lg sm:text-xl md:text-2xl font-semibold text-foreground">
                 Generate Guest Invitation
               </h3>
             </div>

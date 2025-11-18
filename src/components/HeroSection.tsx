@@ -44,23 +44,23 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <p className="font-playfair text-xl sm:text-2xl text-muted-foreground italic mb-3 max-w-3xl mx-auto">
+        <p className="font-playfair text-base sm:text-xl md:text-2xl text-muted-foreground italic mb-3 max-w-3xl mx-auto px-2">
           "Two souls, one heart, forever intertwined"
         </p>
         
-        <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
+        <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
           Saheba & Sufiyan 💍
         </h1>
         
-        <p className="font-playfair text-2xl sm:text-3xl text-rose-gold italic mb-6">
+        <p className="font-playfair text-lg sm:text-2xl md:text-3xl text-rose-gold italic mb-6">
           Begin Their Forever Together
         </p>
 
-        <p className="font-poppins text-lg sm:text-xl text-muted-foreground mb-3 max-w-2xl mx-auto">
+        <p className="font-poppins text-sm sm:text-lg md:text-xl text-muted-foreground mb-3 max-w-2xl mx-auto px-4">
           Join us in celebrating love, laughter, and forever.
         </p>
 
-        <p className="font-playfair text-2xl sm:text-3xl text-accent font-semibold mb-8">
+        <p className="font-playfair text-xl sm:text-2xl md:text-3xl text-accent font-semibold mb-8">
           December 26, 2025
         </p>
 

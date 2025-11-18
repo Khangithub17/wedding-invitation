@@ -49,7 +49,7 @@ const CountdownTimer = () => {
       <div className="max-w-5xl mx-auto text-center animate-fade-in">
         {/* Section Title */}
         <div className="mb-12">
-          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-3">
+          <h2 className="font-playfair text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3">
             The Big Day Arrives In…
           </h2>
           <div className="h-1 w-32 mx-auto bg-gradient-to-r from-rose-gold via-accent to-rose-gold rounded-full" />
@@ -60,13 +60,13 @@ const CountdownTimer = () => {
           {timeUnits.map((unit, index) => (
             <Card 
               key={unit.label}
-              className="p-6 bg-card/80 backdrop-blur-sm border-2 border-rose-gold/20 shadow-[var(--shadow-romantic)] animate-scale-in hover:scale-105 transition-transform duration-300"
+              className="p-3 sm:p-6 bg-card/80 backdrop-blur-sm border-2 border-rose-gold/20 shadow-[var(--shadow-romantic)] animate-scale-in hover:scale-105 transition-transform duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="font-playfair text-4xl sm:text-5xl font-bold text-rose-gold mb-2">
+              <div className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-rose-gold mb-2">
                 {unit.value.toString().padStart(2, '0')}
               </div>
-              <div className="font-poppins text-sm sm:text-base text-muted-foreground uppercase tracking-wider">
+              <div className="font-poppins text-xs sm:text-sm md:text-base text-muted-foreground uppercase tracking-wider">
                 {unit.label}
               </div>
             </Card>
@@ -74,7 +74,7 @@ const CountdownTimer = () => {
         </div>
 
         {/* Sweet Message */}
-        <p className="font-playfair text-xl sm:text-2xl text-muted-foreground italic">
+        <p className="font-playfair text-base sm:text-xl md:text-2xl text-muted-foreground italic px-4">
           Counting down to forever with you, Saheba 💞
         </p>
       </div>

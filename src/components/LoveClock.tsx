@@ -55,17 +55,17 @@ const LoveClock = () => {
     <section className="py-20 px-4 bg-gradient-to-br from-soft-pink/20 via-champagne/10 to-rose-gold/20">
       <div className="container mx-auto text-center space-y-12">
         <div className="space-y-4 animate-fade-in">
-          <h2 className="text-5xl font-playfair text-rose-gold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-rose-gold">
             Love Through Time
           </h2>
-          <p className="text-lg text-muted-foreground font-poppins italic">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-poppins italic px-4">
             Every second counts when love is timeless 💍
           </p>
         </div>
 
         <div className="flex flex-col items-center gap-8">
           {/* Analog Clock */}
-          <div className="relative w-80 h-80 rounded-full border-4 border-rose-gold shadow-2xl bg-gradient-to-br from-ivory via-champagne/50 to-soft-pink/30">
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 border-rose-gold shadow-2xl bg-gradient-to-br from-ivory via-champagne/50 to-soft-pink/30">
             {/* Love Words instead of numbers */}
             <div className="absolute top-4 left-1/2 -translate-x-1/2 text-rose-gold font-playfair text-lg font-bold">
               {loveWords[12]}
@@ -121,7 +121,7 @@ const LoveClock = () => {
           </div>
 
           {/* Time Until Wedding */}
-          <div className="grid grid-cols-4 gap-4 max-w-2xl w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl w-full">
             {[
               { value: timeLeft.days, label: "Days" },
               { value: timeLeft.hours, label: "Hours" },
@@ -130,12 +130,12 @@ const LoveClock = () => {
             ].map((item, index) => (
               <div 
                 key={index}
-                className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-rose-gold/20 shadow-xl hover:scale-105 transition-transform"
+                className="bg-card/80 backdrop-blur-sm p-3 sm:p-6 rounded-2xl border border-rose-gold/20 shadow-xl hover:scale-105 transition-transform"
               >
-                <div className="text-4xl font-playfair font-bold text-rose-gold">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-rose-gold">
                   {item.value}
                 </div>
-                <div className="text-sm text-muted-foreground font-poppins mt-2">
+                <div className="text-xs sm:text-sm text-muted-foreground font-poppins mt-2">
                   {item.label}
                 </div>
               </div>
@@ -143,7 +143,7 @@ const LoveClock = () => {
           </div>
         </div>
 
-        <p className="text-lg text-rose-gold/80 font-poppins italic animate-pulse">
+        <p className="text-sm sm:text-base md:text-lg text-rose-gold/80 font-poppins italic animate-pulse px-4">
           Counting every heartbeat until forever begins 💕
         </p>
       </div>

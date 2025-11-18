@@ -9,7 +9,7 @@ const EventDetails = () => {
         {/* Section Title */}
         <div className="text-center mb-12">
           <div className="inline-block">
-            <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-foreground mb-3">
+            <h2 className="font-playfair text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3">
               The Celebration Details
             </h2>
             <div className="h-1 w-32 mx-auto bg-gradient-to-r from-rose-gold via-accent to-rose-gold rounded-full" />
@@ -24,10 +24,10 @@ const EventDetails = () => {
                 <MapPin className="text-rose-gold" size={24} />
               </div>
               <div className="flex-1">
-                <h3 className="font-playfair text-2xl font-semibold text-foreground mb-2">
+                <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-foreground mb-2">
                   Venue
                 </h3>
-                <p className="font-poppins text-lg text-muted-foreground leading-relaxed">
+                <p className="font-poppins text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                   Dawat Party Plot opposite sentosa home city, near jhunjhunwala international school, Chanod Colony, Dungra, Vapi, Gujarat 396191
                 </p>
               </div>
@@ -39,10 +39,10 @@ const EventDetails = () => {
                 <Clock className="text-rose-gold" size={24} />
               </div>
               <div className="flex-1">
-                <h3 className="font-playfair text-2xl font-semibold text-foreground mb-2">
+                <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-foreground mb-2">
                   Time
                 </h3>
-                <p className="font-poppins text-lg text-muted-foreground">
+                <p className="font-poppins text-sm sm:text-base md:text-lg text-muted-foreground">
                   Reception: 6 PM To 11 PM
                 </p>
               </div>

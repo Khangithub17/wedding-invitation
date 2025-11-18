@@ -105,26 +105,26 @@ const CrazyFinale = () => {
     <section className="py-20 px-4 bg-gradient-to-br from-background via-primary/10 to-background relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8 animate-fade-in">
-          <Rocket className="w-16 h-16 mx-auto mb-4 text-primary animate-bounce" />
-          <h2 className="text-4xl md:text-6xl font-crimson text-foreground mb-4">
+          <Rocket className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 text-primary animate-bounce" />
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-crimson text-foreground mb-4">
             The Grand Finale! 🎆
           </h2>
-          <p className="text-2xl md:text-3xl font-playfair text-primary font-bold mb-3 animate-pulse">
+          <p className="text-xl sm:text-2xl md:text-3xl font-playfair text-primary font-bold mb-3 animate-pulse px-4">
             Happy Marriage Life! 💑
           </p>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg px-4">
             Think you can beat this crazy challenge? 😎
           </p>
         </div>
 
         {!gameStarted ? (
           <div className="text-center animate-scale-in">
-            <div className="bg-card/50 backdrop-blur-sm p-12 rounded-3xl border-2 border-primary/30 shadow-2xl">
-              <PartyPopper className="w-20 h-20 mx-auto mb-6 text-primary" />
-              <h3 className="text-3xl font-crimson text-foreground mb-4">
+            <div className="bg-card/50 backdrop-blur-sm p-6 sm:p-10 md:p-12 rounded-3xl border-2 border-primary/30 shadow-2xl">
+              <PartyPopper className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 text-primary" />
+              <h3 className="text-2xl sm:text-3xl font-crimson text-foreground mb-4">
                 Click Challenge! 💥
               </h3>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-base sm:text-xl text-muted-foreground mb-8 px-4">
                 Click as many times as you can in 10 seconds!
               </p>
               <Button
@@ -138,26 +138,26 @@ const CrazyFinale = () => {
           </div>
         ) : (
           <div className="relative">
-            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-3xl border-2 border-primary/30 shadow-2xl">
+            <div className="bg-card/50 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-3xl border-2 border-primary/30 shadow-2xl">
               <div className="flex justify-between items-center mb-8">
                 <div className="text-center flex-1">
-                  <p className="text-sm text-muted-foreground mb-1">Clicks</p>
-                  <p className="text-5xl font-bold text-primary">{clicks}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-1">Clicks</p>
+                  <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">{clicks}</p>
                 </div>
                 <div className="text-center flex-1">
-                  <p className="text-sm text-muted-foreground mb-1">Time Left</p>
-                  <p className="text-5xl font-bold text-primary">{timeLeft}s</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-1">Time Left</p>
+                  <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">{timeLeft}s</p>
                 </div>
               </div>
 
               <div
                 onClick={handleClick}
-                className="relative w-full h-96 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl border-4 border-primary/50 cursor-pointer hover:border-primary transition-all overflow-hidden"
+                className="relative w-full h-64 sm:h-80 md:h-96 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl border-4 border-primary/50 cursor-pointer hover:border-primary transition-all overflow-hidden"
               >
                 {explosions.map((exp) => (
                   <div
                     key={exp.id}
-                    className="absolute w-20 h-20 pointer-events-none animate-ping"
+                    className="absolute w-16 h-16 sm:w-20 sm:h-20 pointer-events-none animate-ping"
                     style={{
                       left: `${exp.x}%`,
                       top: `${exp.y}%`,

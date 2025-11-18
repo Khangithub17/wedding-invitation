@@ -60,11 +60,11 @@ const ShahbazSurprise = () => {
       <div className="max-w-4xl mx-auto text-center">
         {!showSurprise ? (
           <div className="animate-fade-in">
-            <Gift className="w-20 h-20 mx-auto mb-6 text-primary animate-bounce" />
-            <h2 className="text-4xl md:text-5xl font-crimson text-foreground mb-4">
+            <Gift className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 text-primary animate-bounce" />
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-crimson text-foreground mb-4">
               A Special Message
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg mb-8 px-4">
               Shahbaz has a surprise for Saheba...
             </p>
             <Button
@@ -91,15 +91,15 @@ const ShahbazSurprise = () => {
             ))}
 
             {/* Main Message */}
-            <div className="relative z-10 bg-card/80 backdrop-blur-lg p-12 rounded-3xl border-2 border-primary/30 shadow-2xl">
-              <Sparkles className="w-16 h-16 mx-auto mb-6 text-primary animate-pulse" />
+            <div className="relative z-10 bg-card/80 backdrop-blur-lg p-6 sm:p-10 md:p-12 rounded-3xl border-2 border-primary/30 shadow-2xl">
+              <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 text-primary animate-pulse" />
               
-              <h2 className="text-5xl md:text-6xl font-crimson text-primary mb-8 animate-fade-in">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-crimson text-primary mb-8 animate-fade-in">
                 To My Beautiful Saheba
               </h2>
 
               <div className="min-h-[120px] flex items-center justify-center">
-                <p className="text-2xl md:text-3xl font-crimson text-foreground leading-relaxed animate-fade-in">
+                <p className="text-lg sm:text-2xl md:text-3xl font-crimson text-foreground leading-relaxed animate-fade-in px-4">
                   {surpriseMessages[currentMessage]}
                 </p>
               </div>
@@ -112,10 +112,10 @@ const ShahbazSurprise = () => {
               </div>
 
               <div className="mt-12 text-right">
-                <p className="text-xl font-crimson text-muted-foreground italic">
+                <p className="text-base sm:text-xl font-crimson text-muted-foreground italic">
                   Forever yours,
                 </p>
-                <p className="text-3xl font-crimson text-primary mt-2">
+                <p className="text-2xl sm:text-3xl font-crimson text-primary mt-2">
                   Shahbaz Khan 💍
                 </p>
               </div>

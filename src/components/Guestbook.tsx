@@ -79,7 +79,7 @@ const Guestbook = () => {
       {blessings.map((blessing) => (
         <div
           key={blessing.id}
-          className="absolute text-2xl font-playfair text-rose-gold pointer-events-none animate-[fall_4s_ease-in_forwards]"
+          className="absolute text-sm sm:text-base md:text-2xl font-playfair text-rose-gold pointer-events-none animate-[fall_4s_ease-in_forwards]"
           style={{
             left: `${blessing.left}%`,
             animationDelay: `${blessing.delay}s`,
@@ -93,10 +93,10 @@ const Guestbook = () => {
 
       <div className="container mx-auto max-w-4xl">
         <div className="text-center space-y-4 mb-12 animate-fade-in">
-          <h2 className="text-5xl font-playfair text-rose-gold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-rose-gold">
             ✨ Blessing Book ✨
           </h2>
-          <p className="text-lg text-muted-foreground font-poppins">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-poppins px-4">
             Share your love and blessings for Saheba & Sufiyan
           </p>
         </div>
@@ -137,19 +137,19 @@ const Guestbook = () => {
 
         {wishes.length > 0 && (
           <div className="space-y-4">
-            <h3 className="text-3xl font-playfair text-rose-gold text-center mb-6">
+            <h3 className="text-2xl sm:text-3xl font-playfair text-rose-gold text-center mb-6">
               Blessings Received
             </h3>
             <div className="grid gap-4">
               {wishes.map((item, index) => (
                 <Card 
                   key={index}
-                  className="p-6 bg-card/60 backdrop-blur-sm border-rose-gold/20 hover:shadow-xl transition-all animate-fade-in"
+                  className="p-4 sm:p-6 bg-card/60 backdrop-blur-sm border-rose-gold/20 hover:shadow-xl transition-all animate-fade-in"
                 >
-                  <p className="font-playfair text-rose-gold text-lg mb-2">
+                  <p className="font-playfair text-rose-gold text-base sm:text-lg mb-2">
                     {item.name}
                   </p>
-                  <p className="text-muted-foreground font-poppins">
+                  <p className="text-muted-foreground font-poppins text-sm sm:text-base">
                     {item.wish}
                   </p>
                 </Card>
