@@ -14,7 +14,6 @@ const Gallery = () => {
     { src: gallery3, alt: "Wedding rings on silk fabric" },
     { src: gallery4, alt: "Elegant wedding cake" },
     { src: gallery5, alt: "Venue decoration with fairy lights" },
-    { src: gallery6, alt: "Champagne glasses celebration" },
     { src: galleryDog, alt: "Adorable puppy celebrating the wedding" },
     { src: galleryCat, alt: "Cute kitten with flowers" }
   ];

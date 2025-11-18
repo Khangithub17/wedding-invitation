@@ -109,6 +109,9 @@ const CrazyFinale = () => {
           <h2 className="text-4xl md:text-6xl font-crimson text-foreground mb-4">
             The Grand Finale! 🎆
           </h2>
+          <p className="text-2xl md:text-3xl font-playfair text-primary font-bold mb-3 animate-pulse">
+            Happy Marriage Life! 💑
+          </p>
           <p className="text-muted-foreground text-lg">
             Think you can beat this crazy challenge? 😎
           </p>

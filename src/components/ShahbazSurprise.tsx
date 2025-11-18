@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Gift, Sparkles, Heart } from "lucide-react";
+import { Gift, Sparkles, Heart, Copy } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const ShahbazSurprise = () => {
   const [showSurprise, setShowSurprise] = useState(false);
   const [hearts, setHearts] = useState<Array<{ id: number; x: number; delay: number }>>([]);
+  const { toast } = useToast();
 
   useEffect(() => {
     if (showSurprise) {
@@ -36,6 +38,22 @@ const ShahbazSurprise = () => {
       return () => clearInterval(interval);
     }
   }, [showSurprise]);
+
+  const handleCloneMessage = () => {
+    const fullMessage = `To My Beautiful Saheba\n\n${surpriseMessages.join('\n')}\n\nForever yours,\nShahbaz Khan 💍`;
+    navigator.clipboard.writeText(fullMessage).then(() => {
+      toast({
+        title: "Message Copied! 📋",
+        description: "The surprise message has been copied to your clipboard.",
+      });
+    }).catch(() => {
+      toast({
+        title: "Copy Failed",
+        description: "Could not copy message to clipboard.",
+        variant: "destructive",
+      });
+    });
+  };
 
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-primary/10 via-background to-primary/5 relative overflow-hidden">
@@ -100,6 +118,18 @@ const ShahbazSurprise = () => {
                 <p className="text-3xl font-crimson text-primary mt-2">
                   Shahbaz Khan 💍
                 </p>
+              </div>
+
+              <div className="mt-8 text-center">
+                <Button
+                  onClick={handleCloneMessage}
+                  variant="outline"
+                  size="lg"
+                  className="font-poppins"
+                >
+                  <Copy className="mr-2" size={20} />
+                  Clone Message
+                </Button>
               </div>
             </div>
           </div>

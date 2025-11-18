@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Firefly {
@@ -19,10 +19,54 @@ interface Star {
 
 const NightModeToggle = () => {
   const [isNightMode, setIsNightMode] = useState(false);
+  const [currentQuote, setCurrentQuote] = useState(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const firefliesRef = useRef<Firefly[]>([]);
   const starsRef = useRef<Star[]>([]);
   const animationFrameRef = useRef<number>();
+
+  const romanticQuotes = [
+    {
+      text: "May your love shine brighter than the stars above",
+      icon: "✨"
+    },
+    {
+      text: "Two souls, one heart, forever together",
+      icon: "💑"
+    },
+    {
+      text: "Blessed with love that grows stronger each day",
+      icon: "🌙"
+    },
+    {
+      text: "Together is a wonderful place to be",
+      icon: "💝"
+    },
+    {
+      text: "May your journey be filled with endless love and happiness",
+      icon: "🌟"
+    },
+    {
+      text: "Love is not just looking at each other, it's looking in the same direction",
+      icon: "💫"
+    },
+    {
+      text: "A lifetime of love, laughter, and happily ever after",
+      icon: "💍"
+    },
+    {
+      text: "Two hearts beating as one, forever and always",
+      icon: "💞"
+    },
+    {
+      text: "May your love story be as timeless as the stars",
+      icon: "⭐"
+    },
+    {
+      text: "Wishing you a lifetime filled with love, joy, and beautiful moments",
+      icon: "🎊"
+    }
+  ];
 
   useEffect(() => {
     if (!isNightMode) {
@@ -31,6 +75,11 @@ const NightModeToggle = () => {
       }
       return;
     }
+
+    // Rotate quotes every 5 seconds
+    const quoteInterval = setInterval(() => {
+      setCurrentQuote((prev) => (prev + 1) % romanticQuotes.length);
+    }, 5000);
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -135,6 +184,7 @@ const NightModeToggle = () => {
 
     return () => {
       window.removeEventListener("resize", updateCanvasSize);
+      clearInterval(quoteInterval);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
@@ -152,10 +202,39 @@ const NightModeToggle = () => {
       </Button>
 
       {isNightMode && (
-        <canvas
-          ref={canvasRef}
-          className="fixed inset-0 pointer-events-none z-40"
-        />
+        <>
+          <canvas
+            ref={canvasRef}
+            className="fixed inset-0 pointer-events-none z-40"
+          />
+          
+          {/* Romantic Quote Display */}
+          <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none max-w-3xl w-full px-4">
+            <div className="bg-gradient-to-br from-rose-gold/20 to-accent/20 backdrop-blur-md rounded-3xl p-6 md:p-10 border-2 border-rose-gold/30 shadow-[0_0_50px_rgba(183,110,121,0.3)] animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Heart className="text-rose-gold fill-rose-gold animate-pulse" size={28} />
+                <Sparkles className="text-yellow-300" size={24} />
+              </div>
+              
+              <p className="text-center text-white font-playfair text-xl md:text-2xl lg:text-3xl italic leading-relaxed animate-scale-in px-4">
+                {romanticQuotes[currentQuote].icon} {romanticQuotes[currentQuote].text} {romanticQuotes[currentQuote].icon}
+              </p>
+              
+              <div className="flex justify-center gap-2 mt-8">
+                {romanticQuotes.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      index === currentQuote 
+                        ? "w-8 bg-rose-gold" 
+                        : "w-2 bg-white/30"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </>
       )}
     </>
   );

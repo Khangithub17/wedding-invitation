@@ -20,10 +20,7 @@ const Footer = () => {
           <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-rose-gold to-transparent" />
         </div>
 
-        {/* Copyright */}
-        <p className="text-sm text-muted-foreground font-poppins">
-          © {new Date().getFullYear()} The Wedding Hub. All rights reserved.
-        </p>
+       
       </div>
     </footer>
   );
