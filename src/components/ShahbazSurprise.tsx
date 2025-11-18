@@ -19,11 +19,11 @@ const ShahbazSurprise = () => {
   }, [showSurprise]);
 
   const surpriseMessages = [
-    "From your forever admirer, Shahbaz Khan 💕",
-    "Every moment with you is a blessing, Saheba",
-    "You make my world brighter every single day ✨",
-    "My heart chose you, and it will always be you",
-    "Together, we write the most beautiful love story"
+    "From your best friend, Shahbaz Khan 🤝",
+    "You've been an amazing friend, Saheba",
+    "Your friendship means the world to me ✨",
+    "Best friends are the family we choose for ourselves",
+    "Here's to the memories we've shared and the ones yet to come"
   ];
 
   const [currentMessage, setCurrentMessage] = useState(0);
