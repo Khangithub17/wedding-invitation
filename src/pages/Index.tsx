@@ -5,11 +5,12 @@ import LoveClock from "@/components/LoveClock";
 import CoupleDance from "@/components/CoupleDance";
 import Gallery from "@/components/Gallery";
 import AnimalWishes from "@/components/AnimalWishes";
-import RomanticQuotes from "@/components/RomanticQuotes";
 import Guestbook from "@/components/Guestbook";
-import MessageBottle from "@/components/MessageBottle";
+import RSVPForm from "@/components/RSVPForm";
+import ShahbazSurprise from "@/components/ShahbazSurprise";
 import QRGenerator from "@/components/QRGenerator";
 import SurpriseMessage from "@/components/SurpriseMessage";
+import CrazyFinale from "@/components/CrazyFinale";
 import Footer from "@/components/Footer";
 import LoaderScreen from "@/components/LoaderScreen";
 import NightModeToggle from "@/components/NightModeToggle";
@@ -28,11 +29,12 @@ const Index = () => {
         <CoupleDance />
         <Gallery />
         <AnimalWishes />
-        <RomanticQuotes />
         <Guestbook />
-        <MessageBottle />
+        <RSVPForm />
+        <ShahbazSurprise />
         <QRGenerator />
         <SurpriseMessage />
+        <CrazyFinale />
         <Footer />
       </div>
     </>
